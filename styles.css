@@ -456,30 +456,24 @@ a:focus-visible {
 }
 
 .portrait-slot {
-  display: grid;
+  display: block;
   flex: 0 0 auto;
   width: 140px;
   aspect-ratio: 1;
-  place-content: center;
+  overflow: hidden;
   border: 3px solid rgba(250, 248, 242, 0.9);
   border-radius: 50%;
-  color: var(--ink);
   background: rgba(250, 248, 242, 0.88);
   box-shadow: 0 14px 34px rgba(5, 28, 35, 0.24);
-  text-align: center;
   backdrop-filter: blur(12px);
 }
 
-.portrait-slot strong {
-  font-size: 1.35rem;
-  line-height: 1.1;
-}
-
-.portrait-slot span {
-  color: var(--ink-soft);
-  font-size: 0.78rem;
-  font-weight: 750;
-  letter-spacing: 0.04em;
+.portrait-slot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.35);
 }
 
 .profile-card {
@@ -1921,14 +1915,6 @@ html[lang="zh-CN"] .contact-links a {
 
   .portrait-slot {
     width: 96px;
-  }
-
-  .portrait-slot strong {
-    font-size: 1.1rem;
-  }
-
-  .portrait-slot span {
-    font-size: 0.7rem;
   }
 
   .profile-card {
